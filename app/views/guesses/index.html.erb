@@ -18,11 +18,15 @@
 
 <ul>
   <li>
-    3, 4, 4
+    <%= @first %>, <%= @second %>, <%= @third %>
+    <% if @first < @second && @second < @third %>
+    Yes!
+    <% else %>
+    No!
+    <% end %>
 
-      No.
   </li>
-  <li>
+  <!-- <li>
     3, 4, 5
 
       Yes!
@@ -41,10 +45,10 @@
     2, 3, 5
 
       Yes!
-  </li>
+  </li> -->
 </ul>
 
-<form action="">
+<form action="http://localhost:3000/guesses">
   <p>
     Enter a sequence:
   </p>
