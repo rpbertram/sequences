@@ -4,6 +4,14 @@ def index
   @second = params["second_number"]
   @third = params["third_number"]
 
+  g = Guess.new
+  g.first_num = params["first_number"]
+  g.second_num = params["second_number"]
+  g.third_num = params["third_number"]
+  g.save
+
+  @list = Guess.all
+
   render("guesses/index.html.erb")
 end
 
